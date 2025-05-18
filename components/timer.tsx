@@ -7,7 +7,7 @@ import { Progress } from "@/components/ui/progress"
 import { Pause, Play, RotateCcw } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { formatTime } from "@/lib/format-time"
-import type { TimerType } from "@/types/timer" // Rename the Timer variable to TimerType
+import type { TimerType } from "@/types/timer"
 
 interface TimerProps {
   timer: TimerType
@@ -16,11 +16,18 @@ interface TimerProps {
   onReset: () => void
 }
 
+/**
+ * Timer component that displays and controls an individual timer
+ * Shows time remaining, progress bar, and control buttons
+ */
 export function Timer({ timer, onStart, onPause, onReset }: TimerProps) {
+  // Track the timer's remaining time in seconds
   const [remainingTime, setRemainingTime] = useState<number>(timer.remainingTime || timer.duration)
+  // Calculate progress percentage for the progress bar
   const [progress, setProgress] = useState<number>(
     ((timer.duration - (timer.remainingTime || timer.duration)) / timer.duration) * 100,
   )
+  // State to control showing the halfway alert animation
   const [showHalfwayAlert, setShowHalfwayAlert] = useState<boolean>(false)
 
   useEffect(() => {

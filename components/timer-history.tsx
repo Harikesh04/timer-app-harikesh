@@ -15,9 +15,15 @@ interface TimerHistoryProps {
   onExport: () => void
 }
 
+/**
+ * Displays a searchable history of completed timers
+ * Allows filtering and exporting timer history data
+ */
 export function TimerHistory({ completedTimers, onExport }: TimerHistoryProps) {
+  // State for search functionality
   const [searchQuery, setSearchQuery] = useState("")
   
+  // Filter timers based on search query
   const filteredTimers = useMemo(() => completedTimers.filter(
     (timer) =>
       timer.name.toLowerCase().includes(searchQuery.toLowerCase()) ||

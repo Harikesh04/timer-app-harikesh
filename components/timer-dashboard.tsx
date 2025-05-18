@@ -11,6 +11,11 @@ import { Plus, History } from "lucide-react"
 import { AddTimerDialog } from "@/components/add-timer-dialog"
 import type { Timer } from "@/types/timer"
 
+/**
+ * Main application component that renders the timer dashboard
+ * Manages the timer display, controls, and UI interactions
+ */
+
 export function TimerDashboard() {
   const {
     timers,
@@ -38,7 +43,7 @@ export function TimerDashboard() {
     setCompletedTimer(null)
   }, [])
 
-  // Listen for timer completions with useMemo for dependency tracking
+  // Listen for timer completions
   useEffect(() => {
     const checkCompletions = () => {
       const now = Date.now()
@@ -54,7 +59,6 @@ export function TimerDashboard() {
     return () => clearInterval(interval)
   }, [timers, completeTimer])
 
-  // Memoize the header section for better performance
   const headerSection = useMemo(() => (
     <header className="flex justify-between items-center mb-8 pt-4">
       <h1 className="text-3xl font-bold text-slate-800 dark:text-slate-100">Timer Dashboard</h1>
