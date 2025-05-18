@@ -9,7 +9,7 @@ Live Demo: [timer-app-harikesh.vercel.app](https://timer-app-harikesh.vercel.app
 - Create, start, pause, and reset multiple timers
 - Organize timers by categories
 - Control all timers in a category with a single action
-- View timer completion history
+- View timer completion history , export/download history in JSON
 - Responsive design with dark/light mode
 - Offline capabilities with local storage
 - Completion notifications with confetti animation
