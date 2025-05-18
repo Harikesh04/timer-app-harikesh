@@ -1,5 +1,16 @@
 # Timer App
 
+<img width="1437" alt="image" src="https://github.com/user-attachments/assets/950309e6-886e-430c-9390-385458c1c699" />
+<img width="1440" alt="image" src="https://github.com/user-attachments/assets/88daf5bd-5970-4561-a7e8-3e02148f8bdb" />
+<img width="1440" alt="image" src="https://github.com/user-attachments/assets/60512b46-aa18-4332-b88c-eb6ac297e884" />
+<img width="259" alt="image" src="https://github.com/user-attachments/assets/16b35248-ab3d-423c-b1cc-19d498646451" />
+<img width="1440" alt="image" src="https://github.com/user-attachments/assets/f0c13648-fb32-4bcb-b22a-02f5efa3d9ca" />
+
+
+
+
+
+
 A modern, feature-rich timer application built with Next.js, React, and Tailwind CSS.
 
 Live Demo: [timer-app-harikesh.vercel.app](https://timer-app-harikesh.vercel.app)
